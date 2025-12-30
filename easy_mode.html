@@ -18,6 +18,39 @@
     </header>
 
     <main class="container">
+        <!-- New Netmarble-style Intro Banner -->
+        <section class="easy-intro-banner">
+            <p class="intro-text">여기어때는 <strong>알기 쉬운 개인정보처리방침</strong>을 통해 이용자의 개인정보 처리과정을 알기 쉽게 안내해드리겠습니다.</p>
+
+            <div class="policy-icons-grid">
+                <a href="#section2" class="icon-item">
+                    <span class="icon-circle"><i class="fa-solid fa-file-signature"></i></span>
+                    <span class="icon-label">수집</span>
+                </a>
+                <a href="#section3" class="icon-item">
+                    <span class="icon-circle"><i class="fa-solid fa-bullseye"></i></span>
+                    <span class="icon-label">이용</span>
+                </a>
+                <a href="#section4" class="icon-item">
+                    <span class="icon-circle"><i class="fa-solid fa-handshake"></i></span>
+                    <span class="icon-label">제공</span>
+                </a>
+                <a href="#section5" class="icon-item">
+                    <span class="icon-circle"><i class="fa-solid fa-clock-rotate-left"></i></span>
+                    <span class="icon-label">파기</span>
+                </a>
+                <a href="#section6" class="icon-item">
+                    <span class="icon-circle"><i class="fa-solid fa-shield-halved"></i></span>
+                    <span class="icon-label">보호</span>
+                </a>
+            </div>
+
+            <div class="intro-footer">
+                <p>아래 예시는 대표적인 항목만 나타낸 것입니다.</p>
+                <p>자세한 내용을 확인하기 원하신다면 <a href="index.html" class="link-full-policy">개인정보처리방침(본문)</a>을 참고부탁드립니다.</p>
+            </div>
+        </section>
+
         <div class="policy-layout">
             <nav class="sidebar-nav">
                 <ul class="nav-list">
@@ -128,39 +161,72 @@
                 <!-- Section 5 -->
                 <section id="section5" class="section-card">
                     <h2>6. 언제 파기하고 얼마나 보관하나요? ⏰</h2>
-                    <p>이용 목적이 달성되면 사용자의 정보를 지체 없이 파기합니다. 단, 법령 및 내부 방침에 따라 일정 기간 보관하는 정보들은 다음과 같습니다.</p>
+                    <p style="margin-bottom: 24px; color: var(--text-sub);">회사는 사용 목적이 달성된 개인정보를 지체 없이 파기하는 것이 원칙이나, 아래와
+                        같이 법령 및 내부 방침에 따라 필요한 정보만 골라 안전하게 보관합니다.</p>
 
-                    <div class="retention-detailed">
-                        <div class="info-box">
-                            <span class="info-title">탈퇴 즉시 파기 (단, 24시간 보관)</span>
-                            <ul class="info-list">
-                                <li><strong>보관 정보</strong>: 이메일 주소</li>
-                                <li><strong>이유</strong>: 탈퇴 후 즉시 재가입하는 것을 방지하기 위함</li>
-                            </ul>
+                    <div class="period-grid">
+                        <!-- Card 1 -->
+                        <div class="period-item">
+                            <div class="period-header">
+                                <span class="time">탈퇴 시 파기</span>
+                                <span class="period-badge">24시간 보관</span>
+                            </div>
+                            <div class="period-info-row">
+                                <span class="label">보관 정보</span>
+                                <span class="value">이메일 주소</span>
+                            </div>
+                            <div class="period-info-row">
+                                <span class="label">보관 사유</span>
+                                <span class="value">탈퇴 후 즉시 재가입 방지 (사용자 식별)</span>
+                            </div>
                         </div>
 
-                        <div class="info-box">
-                            <span class="info-title">30일 동안 보관</span>
-                            <ul class="info-list">
-                                <li><strong>보관 정보</strong>: 휴대전화 번호</li>
-                                <li><strong>이유</strong>: 규정 위반 등 부정이용 방지</li>
-                            </ul>
+                        <!-- Card 2 -->
+                        <div class="period-item">
+                            <div class="period-header">
+                                <span class="time">30일 동안 보관</span>
+                                <span class="period-badge">내부 방침</span>
+                            </div>
+                            <div class="period-info-row">
+                                <span class="label">보관 정보</span>
+                                <span class="value">휴대전화 번호</span>
+                            </div>
+                            <div class="period-info-row">
+                                <span class="label">보관 사유</span>
+                                <span class="value">규정 위반 등 부정이용 방지</span>
+                            </div>
                         </div>
 
-                        <div class="info-box">
-                            <span class="info-title">3년 동안 보관 (상담 기록)</span>
-                            <ul class="info-list">
-                                <li><strong>보관 정보</strong>: 고객 불만 및 분쟁 처리 기록</li>
-                                <li><strong>이유</strong>: 전자상거래법에 따른 소비자 보호</li>
-                            </ul>
+                        <!-- Card 3 -->
+                        <div class="period-item">
+                            <div class="period-header">
+                                <span class="time">3년 동안 보관</span>
+                                <span class="period-badge">전자상거래법</span>
+                            </div>
+                            <div class="period-info-row">
+                                <span class="label">보관 정보</span>
+                                <span class="value">소비자의 불만 또는 분쟁처리에 관한 기록</span>
+                            </div>
+                            <div class="period-info-row">
+                                <span class="label">보관 사유</span>
+                                <span class="value">문의 및 상담 내용 증빙 (법적 의무)</span>
+                            </div>
                         </div>
 
-                        <div class="info-box highlight">
-                            <span class="info-title">5년 동안 보관 (결제 기록)</span>
-                            <ul class="info-list">
-                                <li><strong>보관 정보</strong>: 계약, 청약철회, 대금 결제, 재화 공급 기록</li>
-                                <li><strong>이유</strong>: 전자상거래법 등 관계 법령 의무 준수</li>
-                            </ul>
+                        <!-- Card 4 -->
+                        <div class="period-item highlight">
+                            <div class="period-header">
+                                <span class="time">5년 동안 보관</span>
+                                <span class="period-badge">상업등기법 등</span>
+                            </div>
+                            <div class="period-info-row">
+                                <span class="label">보관 정보</span>
+                                <span class="value">계약, 대금 결제, 재화 공급 기록</span>
+                            </div>
+                            <div class="period-info-row">
+                                <span class="label">보관 사유</span>
+                                <span class="value">세무 처리 및 결제 취소 증빙 (법적 의무)</span>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -197,7 +263,7 @@
                     </div>
 
                     <h3>개인정보 보호책임자 및 담당부서</h3>
-                    <div class="info-box" style="display: flex; gap: 40px; wrap: wrap;">
+                    <div class="info-box" style="display: flex; gap: 40px; flex-wrap: wrap;">
                         <div>
                             <strong>개인정보 보호책임자(CPO)</strong>
                             <p>사이버보안센터 백계만</p>
