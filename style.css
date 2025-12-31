@@ -940,26 +940,159 @@ html {
     margin-top: 8px;
 }
 
+/* --- Mobile/Tablet Responsive Styles (Max-width: 1024px) --- */
 @media (max-width: 1024px) {
+
+    /* 1. Layout Reset */
     .portal-layout {
-        grid-template-columns: 1fr;
+        display: block;
+        /* Remove grid to stack sidebar and content */
+        margin-bottom: 60px;
     }
 
+    /* 2. Sidebar TOC (Move to top, remove sticky) */
     .sidebar-toc {
-        display: none;
+        display: block;
+        /* Ensure it's visible (was hidden in old code) */
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 32px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 24px;
+        top: auto;
     }
 
+    .toc-card {
+        padding: 20px;
+        background: #f8f9fb;
+    }
+
+    .toc-card h3 {
+        font-size: 1.1rem;
+        border-bottom: none;
+        margin-bottom: 12px;
+    }
+
+    /* Horizontal wrapping for TOC items on mobile */
+    .toc-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .toc-list li {
+        width: 100%;
+        /* Default to list style, or make them chips? 
+                       Let's keep them as list items but allow width adjustment if needed. 
+                       Actually, simple list is better for TOC. */
+        margin-bottom: 6px;
+    }
+
+    .toc-list a {
+        display: inline-block;
+        padding: 4px 0;
+        font-size: 0.95rem;
+    }
+
+    /* 3. Label Grid (5 cols -> 2 cols) */
     .label-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* 4. Navigation & Header */
+    .container {
+        padding: 0 20px;
+    }
+
+    .quick-nav .container.flex-between {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .brand {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .mode-toggles {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* 5. Policy Content Adjustments */
+    .full-policy-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .section-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section-header h2 {
+        font-size: 1.2rem;
+    }
+
+    /* 6. Table Handling */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 24px;
+        border: 1px solid #ebedf0;
+        border-radius: 12px;
+    }
+
+    .legal-table th,
+    .legal-table td {
+        white-space: nowrap;
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+
+    /* 7. Easy Mode Adjustments */
+    .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sidebar-nav {
+        position: static;
+        margin-bottom: 24px;
+        overflow-x: auto;
+    }
+
+    .nav-list {
+        display: flex;
+        gap: 12px;
+        width: max-content;
+    }
+
+    .nav-link {
+        white-space: nowrap;
     }
 }
 
-@media (max-width: 768px) {
+/* Extra small devices */
+@media (max-width: 480px) {
     .label-grid {
         grid-template-columns: 1fr;
+        /* 1 col for very small screens */
     }
 
-    .full-policy-text h1 {
-        font-size: 1.8rem;
+    .toc-list li {
+        font-size: 0.9rem;
+    }
+
+    .btn-toggle {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .senior-hero h2 {
+        font-size: 1.6rem;
     }
 }
