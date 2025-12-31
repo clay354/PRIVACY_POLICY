@@ -1129,17 +1129,16 @@ html {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         width: 100%;
-        max-width: calc(100vw - 32px);
+        max-width: 100%;
     }
 
     .section-content {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        /* overflow removed - only sub-section should scroll */
     }
 
     .legal-table {
-        width: auto;
-        min-width: 100%;
+        width: 100%;
+        display: table;
     }
 
     .legal-table th,
@@ -1336,6 +1335,10 @@ html {
 
     .table-wrapper {
         max-width: calc(100vw - 24px);
+    }
+
+    .sub-section {
+        max-width: 100%;
     }
 
     /* Easy mode specific - smaller screens */
