@@ -983,6 +983,12 @@ html {
         max-width: 100%;
     }
 
+    /* Allow tables to overflow their containers */
+    table,
+    table * {
+        max-width: none;
+    }
+
     img {
         max-width: 100%;
         height: auto;
@@ -1101,8 +1107,22 @@ html {
         max-width: calc(100vw - 32px);
     }
 
-    .legal-table {
+    /* For tables without wrapper */
+    .sub-section {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         width: 100%;
+        max-width: calc(100vw - 32px);
+    }
+
+    .section-content {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .legal-table {
+        width: auto;
+        min-width: 100%;
     }
 
     .legal-table th,
