@@ -544,12 +544,26 @@ body.senior-body {
 }
 
 @media (max-width: 768px) {
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    .container,
+    .senior-container {
+        padding: 0 16px;
+        width: 100%;
+        max-width: 100vw;
+    }
+
     .senior-hero h2 {
         font-size: 2.2rem;
     }
 
     .senior-body .contact-info {
         grid-template-columns: 1fr;
+        width: 100%;
     }
 
     .retention-item {
@@ -557,6 +571,15 @@ body.senior-body {
         text-align: left;
         align-items: flex-start;
         gap: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .icon-card,
+    .premium-card,
+    .help-card {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -640,6 +663,13 @@ body.senior-body {
     margin-left: auto;
     margin-right: auto;
     mix-blend-mode: multiply;
+    max-width: 100%;
+}
+
+/* Ensure all images fit within viewport */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .accordion-controls .divider {
@@ -943,6 +973,21 @@ html {
 /* --- Mobile/Tablet Responsive Styles (Max-width: 1024px) --- */
 @media (max-width: 1024px) {
 
+    /* 0. Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    * {
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     /* 1. Layout Reset */
     .portal-layout {
         display: block;
@@ -1003,7 +1048,15 @@ html {
 
     /* 4. Navigation & Header */
     .container {
-        padding: 0 20px;
+        padding: 0 16px;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .senior-container {
+        padding: 0 16px;
+        width: 100%;
+        max-width: 100vw;
     }
 
     .quick-nav .container.flex-between {
@@ -1044,6 +1097,12 @@ html {
         margin-bottom: 24px;
         border: 1px solid #ebedf0;
         border-radius: 12px;
+        width: 100%;
+        max-width: calc(100vw - 32px);
+    }
+
+    .legal-table {
+        width: 100%;
     }
 
     .legal-table th,
@@ -1057,30 +1116,113 @@ html {
     .policy-layout {
         grid-template-columns: 1fr;
         gap: 40px;
+        width: 100%;
     }
 
     .sidebar-nav {
         position: static;
         margin-bottom: 24px;
         overflow-x: auto;
+        width: 100%;
+        max-width: 100vw;
     }
 
     .nav-list {
         display: flex;
         gap: 12px;
         width: max-content;
+        padding: 0 16px;
     }
 
     .nav-link {
         white-space: nowrap;
     }
+
+    /* Section Cards */
+    .section-card {
+        padding: 24px 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .policy-content {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Info boxes and grids */
+    .info-box {
+        padding: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .period-grid,
+    .collection-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .period-item,
+    .icon-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Intro banner */
+    .easy-intro-banner {
+        padding: 24px 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .policy-icons-grid {
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Partner chips */
+    .partner-chips {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .chip {
+        white-space: nowrap;
+    }
+
+    /* Premium cards */
+    .premium-card,
+    .help-card {
+        padding: 24px 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .retention-list {
+        width: 100%;
+    }
 }
 
 /* Extra small devices */
 @media (max-width: 480px) {
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    .container,
+    .senior-container {
+        padding: 0 12px;
+        width: 100%;
+        max-width: 100vw;
+    }
+
     .label-grid {
         grid-template-columns: 1fr;
         /* 1 col for very small screens */
+        width: 100%;
     }
 
     .toc-list li {
@@ -1094,5 +1236,17 @@ html {
 
     .senior-hero h2 {
         font-size: 1.6rem;
+    }
+
+    .section-card,
+    .info-box,
+    .easy-intro-banner,
+    .premium-card,
+    .help-card {
+        padding: 16px 12px;
+    }
+
+    .table-wrapper {
+        max-width: calc(100vw - 24px);
     }
 }
