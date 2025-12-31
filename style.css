@@ -65,6 +65,23 @@ body {
     margin-right: 8px;
 }
 
+.btn-back {
+    padding: 8px 16px;
+    background: #f8f9fb;
+    color: var(--text-main);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.btn-back:hover {
+    background: var(--yeogi-red);
+    color: #fff;
+}
+
 .policy-layout {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -1112,17 +1129,16 @@ html {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         width: 100%;
-        max-width: calc(100vw - 32px);
+        max-width: 100%;
     }
 
     .section-content {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        /* overflow removed - only sub-section should scroll */
     }
 
     .legal-table {
-        width: auto;
-        min-width: 100%;
+        width: 100%;
+        display: table;
     }
 
     .legal-table th,
@@ -1177,6 +1193,11 @@ html {
         box-sizing: border-box;
     }
 
+    .info-list {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
     .period-grid,
     .collection-grid {
         grid-template-columns: 1fr;
@@ -1221,6 +1242,52 @@ html {
 
     .retention-list {
         width: 100%;
+    }
+
+    /* Easy mode specific */
+    .easy-header .container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .easy-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .easy-footer .contact-info {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .download-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+    }
+
+    .intro-footer {
+        font-size: 0.9rem;
+    }
+
+    .policy-icons-grid {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .icon-circle {
+        width: 56px;
+        height: 56px;
+        font-size: 1.3rem;
+    }
+
+    .icon-label {
+        font-size: 0.9rem;
     }
 }
 
@@ -1268,5 +1335,58 @@ html {
 
     .table-wrapper {
         max-width: calc(100vw - 24px);
+    }
+
+    .sub-section {
+        max-width: 100%;
+    }
+
+    /* Easy mode specific - smaller screens */
+    .easy-header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .easy-header h1 {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .btn-back {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+    }
+
+    .intro-footer {
+        font-size: 0.85rem;
+    }
+
+    .policy-icons-grid {
+        gap: 16px;
+    }
+
+    .icon-circle {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+
+    .icon-label {
+        font-size: 0.85rem;
+    }
+
+    .easy-footer {
+        padding: 40px 0;
+    }
+
+    .footer-info {
+        font-size: 0.85rem;
     }
 }
